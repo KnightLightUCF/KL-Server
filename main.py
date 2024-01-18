@@ -1,4 +1,4 @@
-import os
+import subprocess
 
 '''
 holds the start logic for windows. Each OS will be different. 
@@ -6,22 +6,29 @@ holds the start logic for windows. Each OS will be different.
 def start_cmd_windows():
     '''
     starts up console. /k makes the program stay online. /c would close it.
+    TODO: URGENT figure out a way to kill program after it is spinned up.
     TODO: We need to make the console prompt turn on with a python ide and then run poetry commands.
-    TODO: Make the cmd start as a subprocess under the OS so we can track it. 
 
-    os.system("start cmd /k {commands})
+    subprocess.Popen(['command1','command2'], new process arguments)
+
+    DOCS: https://docs.python.org/3/library/subprocess.html
     '''
 
-    os.system("start cmd /k cd..")
+    pro = subprocess.Popen(['start', 'cmd', '/k', 'windows\\startup.bat'], shell=True)
+    
+
+def shutdown_cmd_windows():
+    pass
 
 '''
 Will hold the runtime of our program
 '''
 def run():
-    pass
+    input("Press any key to exit... \n>>> ")
         
 
 if __name__ == "__main__":
     start_cmd_windows()
 
     run()
+    
