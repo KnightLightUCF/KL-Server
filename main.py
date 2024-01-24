@@ -37,15 +37,8 @@ Will hold the runtime of our program
 For now it_count will be to test how long until we kill the subprocess
 '''
 def run(it_count):
-    i=0
-    #test code to show that both processes run at the sametime
-    while True: 
-        if i>=it_count:
-            shutdown_cmd_windows()
-            break
-
-        i+=1
-
+    input("Press any key to exit... \n>>> ")
+    shutdown_cmd_windows()
     input("Press any key to exit... \n>>> ")
         
 
