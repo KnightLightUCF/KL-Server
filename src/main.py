@@ -12,8 +12,10 @@ def run():
     input("Press any key to exit... \n>>> ")
         
 def start():
-    download_check()
-
-    start_cmd_windows()
+    is_downloaded = download_check()
+    if not is_downloaded:
+        start_cmd_windows(batch_file_name="install.bat")
+    else:
+        start_cmd_windows(batch_file_name="startup.bat")
     
     run()

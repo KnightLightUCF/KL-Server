@@ -6,6 +6,9 @@ IMPORTANT_MESSAGE = '''
 If skybrush-server is not installed the 
 program will install automatically.
 
+Poetry is required for it to run.
+[This may change in the future]
+
 File structure should look like this:
 (after install)
 

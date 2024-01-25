@@ -10,7 +10,7 @@ Then ZipFile will unzip it.
 '''
 def download_skybrush_DROP_BOX():
     url = (
-        "https://www.dropbox.com/scl/fi/oax596qtf0obxt43tfmzx/skybrush-server.zip?rlkey=0m4qvefvvfwsu4lgvyr7v5uvq&dl=1"
+        "https://www.dropbox.com/scl/fi/1euh62vgk5f40ohynekp2/skybrush-server.zip?rlkey=prkfe1gh6wrv9ym3wetwvbjk4&dl=1"
     )
     filename = "skybrush_download.zip"
 
@@ -38,8 +38,9 @@ def is_skybrush_downloaded() -> bool:
 '''
 logic for checking download and installing skybrush
 '''
-def download_check():
+def download_check() -> bool:
     result = is_skybrush_downloaded()
     if not result:
         print("[WARNING] SKYBRUSH NOT INSTALLED. NOW INSTALLING.")
         download_skybrush_DROP_BOX()
+    return result
