@@ -1,8 +1,22 @@
 import subprocess
 
-DEFAULT_IT_COUNT = 10000000 #testing can edit 
-
 pid = None #used to track the spinned up process 
+
+IMPORTANT_MESSAGE = '''
+|============[KL-Server - v0.1]============|
+
+
+Requried to install skybrush and run poetry. Leave skybrush-server in the root directory for this to work.
+
+File structure should look like this:
+Root/
+     skybrush-server/
+     windows/
+     .gitignore
+     main.py
+
+|===========================================|
+'''
 
 '''
 holds the start logic for windows. Each OS will be different. 
@@ -36,21 +50,16 @@ Will hold the runtime of our program
 
 For now it_count will be to test how long until we kill the subprocess
 '''
-def run(it_count):
-    i=0
-    #test code to show that both processes run at the sametime
-    while True: 
-        if i>=it_count:
-            shutdown_cmd_windows()
-            break
-
-        i+=1
-
+def run():
+    input("Press any key to exit... \n>>> ")
+    shutdown_cmd_windows()
     input("Press any key to exit... \n>>> ")
         
 
 if __name__ == "__main__":
+    print(IMPORTANT_MESSAGE)
+
     start_cmd_windows()
 
-    run(it_count=DEFAULT_IT_COUNT)
+    run()
     
