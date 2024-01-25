@@ -1,7 +1,7 @@
 from src.main import * 
 
 IMPORTANT_MESSAGE = '''
-|============[KL-Server - v0.2]============|
+|============[KL-Server - v0.2.5]============|
 
 If skybrush-server is not installed the 
 program will install automatically.
