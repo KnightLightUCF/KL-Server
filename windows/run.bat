@@ -2,5 +2,5 @@
 ::WARNING using py '../main.py' messes up the start process
 
 cd..
-py main.py
+py start.py
 cd windows

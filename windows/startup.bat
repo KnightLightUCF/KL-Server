@@ -2,4 +2,7 @@
 :: this file will be were we right the commands needed instead of harding coding in python arguments
 :: for windows ONLY
 
-cd .. & cd skybrush-server\.venv\Scripts & activate & skybrushd
+cd ..
+cd skybrush-server
+
+poetry run skybrushd
