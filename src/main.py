@@ -1,5 +1,8 @@
 from src.download import download_check
 from src.windows import *
+from src.mac import *
+import sys
+from sys import platform
 
 '''
 Will hold the runtime of our program
@@ -14,8 +17,17 @@ def run():
 def start():
     is_downloaded = download_check()
     if not is_downloaded:
-        start_cmd_windows(batch_file_name="install.bat")
+        print("not downloaded")
+        if sys.platform == 'win32':
+            start_cmd_windows(batch_file_name="install.bat") 
+        if sys.platform == 'darwin':
+            start_cmd_mac(file = "install.sh")
     else:
-        start_cmd_windows(batch_file_name="startup.bat")
+        print("downloaded")
+        if sys.platform == 'win32':
+            start_cmd_windows(batch_file_name="startup.bat")
+        if  sys.platform == 'darwin':
+            print("mac")
+            start_cmd_mac(file = "startup.sh")
     
     run()
