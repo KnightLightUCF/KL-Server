@@ -9,25 +9,24 @@ Will hold the runtime of our program
 '''
 def run():
     input("Press any key to exit... \n>>> ")
-    
-    shutdown_cmd_windows()
+    if sys.platform == 'win32':
+        shutdown_cmd_windows()
+    if sys.platform == 'darwin':
+        stop_cmd_mac()
     
     input("Press any key to exit... \n>>> ")
         
 def start():
     is_downloaded = download_check()
     if not is_downloaded:
-        print("not downloaded")
         if sys.platform == 'win32':
             start_cmd_windows(batch_file_name="install.bat") 
         if sys.platform == 'darwin':
             start_cmd_mac(file = "install.sh")
     else:
-        print("downloaded")
         if sys.platform == 'win32':
             start_cmd_windows(batch_file_name="startup.bat")
         if  sys.platform == 'darwin':
-            print("mac")
             start_cmd_mac(file = "startup.sh")
     
     run()

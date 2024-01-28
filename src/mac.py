@@ -2,7 +2,12 @@ import subprocess
 
 def start_cmd_mac(file):
     
+    
+    global process
+    
     print("Server is running at localhost:5000")
-    subprocess.run(["sh", "./mac/"+file], capture_output=True)
+    process = subprocess.Popen(["sh", "./mac/"+file])
     print("Server has closed")
     
+def stop_cmd_mac():
+    process.terminate()
