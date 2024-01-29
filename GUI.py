@@ -45,34 +45,48 @@ def terminate_server():
  
 
 
-
-
-# create root window
 root = Tk()
- 
-# root window title and dimension
 root.title("Skybrush Server Application for KnightLight")
-# Set geometry(widthxheight)
-root.geometry('350x200')
- 
-# adding a label to the root window
-lbl = Label(root, text = "Server Controls")
-lbl.grid()
- 
-# adding Entry Field
-# txt = Entry(root, width=10)
-# txt.grid(column =1, row =0)
- 
- 
-# function to display user text when 
-# button is clicked
-# button widget with red color text inside
-start_server = Button(root, text = "Start the Server" , fg = "green", command=start)
-stop_server = Button(root, text = "Stop the server" , fg = "red", command=terminate_server)
+root.geometry('550x200')
+
+# Adding a label to the root window
+lbl = Label(root, text="Server Controls", width=12, height=2, font=('Helvatical bold',20))
+lbl.grid(column=2, row=1, columnspan=2, pady=10)
+
+# Adding start and stop buttons
+start_server = Button(root, text="Start the Server", fg="green", command=start, width=20, height=5)
+stop_server = Button(root, text="Stop the Server", fg="red", command=terminate_server, width=20, height=5)
 
 # Set Button Grid
-start_server.grid(column=1, row=1)
-stop_server.grid(column=2, row= 1)
- 
+start_server.grid(column=1, row=2, padx=10)
+stop_server.grid(column=5, row=2, padx=10)
+
 # Execute Tkinter
 root.mainloop()
+
+
+
+
+
+
+# # create root window
+# root = Tk()
+ 
+# # root window title and dimension
+# root.title("Skybrush Server Application for KnightLight")
+# # Set geometry(widthxheight)
+# root.geometry('350x200')
+ 
+# # adding a label to the root window
+# lbl = Label(root, text = "Server Controls")
+# lbl.grid()
+ 
+# start_server = Button(root, text = "Start the Server" , fg = "green", command=start)
+# stop_server = Button(root, text = "Stop the server" , fg = "red", command=terminate_server)
+
+# # Set Button Grid
+# start_server.grid(column=1, row=1)
+# stop_server.grid(column=2, row= 1)
+ 
+# # Execute Tkinter
+# root.mainloop()
