@@ -1,5 +1,6 @@
 #! /bin/bash
-# cd ..
 cd skybrush-server
-poetry install
-poetry run skybrushd
+cd .venv
+cd bin
+source activate
+python3 skybrushd
