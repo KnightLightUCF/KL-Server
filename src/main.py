@@ -14,7 +14,7 @@ def run():
     if sys.platform == 'darwin':
         stop_cmd_mac()
     
-    input("Press any key to exit... \n>>> ")
+    # input("Press any key to exit... \n>>> ")
         
 def start():
     is_downloaded = download_check()
@@ -23,6 +23,7 @@ def start():
             start_cmd_windows(batch_file_name="install.bat") 
         if sys.platform == 'darwin':
             start_cmd_mac(file = "install.sh")
+            start_cmd_mac(file = "startup.sh")
     else:
         if sys.platform == 'win32':
             start_cmd_windows(batch_file_name="startup.bat")
