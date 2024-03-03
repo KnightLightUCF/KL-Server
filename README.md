@@ -14,13 +14,21 @@ git clone <repository-url>
 cd <project-directory>
 ```
 
-# Starting the server
-### MacOS
+# Starting the Server
+## MacOS
 Starting up the server on Mac is as simple as moving into the /mac folder and running run.sh!
 ```bash
 cd <project-directory>/mac
 sh run.sh
 ```
 All dependencies should be installed and the server will start running afterwards.
+### Potential Issue on Mac...
+If you are having trouble starting the server, there is a high likelyhood that the port the server runs on is occupied by Apple Airplay. To fix this issue, the current solution is to turn off Airplay in your device settings. Instructions can be found [here](https://osxdaily.com/2022/12/19/how-to-turn-off-airplay-on-mac/)
 
-### Windows
+## Windows
+To start the server on Windows, change into the /windows folder and run the run.bat file
+```bash
+cd <project-directory>/windows
+run run.bat
+```
+All dependencies should be installed and the server will start running afterwards.
